@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header } from "./components/Header";
+import { Card } from "./components/Card";
+
+import { GlobalStyle, Container, Button } from "./styles/global";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Container>
+        <Card type="voluntariado" info="2-6" />
+        <Card type="doação" info="36" />
+        <Card type="doação" info="36" />
+        <Card type="doação" info="36" />
+        <Card
+          type="voluntariado"
+          description="Entrega de roupas e alimentos para moradores de rua"
+          info="2-6"
+        />
+        <Card type="arrecadação" info="5000" />
+        <Card type="doação" info="36" />
+        <Card
+          type="voluntariado"
+          description="Entrega de roupas e alimentos para moradores de rua"
+          info="2-6"
+        />
+        <Card type="doação" info="36" />
+      </Container>
+      <Button margin="40px"> Todas as Oportunidades </Button>
+      <GlobalStyle />
+    </>
   );
 }
 
