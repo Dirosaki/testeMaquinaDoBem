@@ -62,10 +62,6 @@ export const CardContainer = styled.div`
         font-size: 0.875rem;
         font-weight: 500;
         color: var(--color-white);
-        transition: filter 0.2s;
-        &:hover {
-          filter: brightness(0.95);
-        }
       }
     }
   }
@@ -76,6 +72,44 @@ export const CardContainer = styled.div`
       font-size: 0.9375rem;
       font-weight: 400;
       color: var(--color-text);
+    }
+  }
+
+  @media (min-width: 700px) {
+    div:last-child {
+      button {
+        transition: filter 0.2s;
+        &:hover {
+          filter: brightness(0.95);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    width: 80vw;
+    main {
+      div:first-child {
+        align-items: center;
+        flex-direction: column-reverse;
+        p {
+          margin-top: 0.5rem;
+        }
+      }
+
+      div:last-child {
+        margin-top: 1.875rem;
+        flex-direction: column;
+        text-align: center;
+        div {
+          margin-bottom: 1rem;
+          flex-direction: column;
+          span {
+            margin-top: 0.25rem;
+            margin-left: 0px;
+          }
+        }
+      }
     }
   }
 `;

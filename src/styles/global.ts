@@ -26,6 +26,13 @@ export const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     background: var(--color-white);
     -webkit-font-smoothing: antialiased;
+    div.button {
+      display: flex;
+      width: 100%;
+      @media (max-width: 700px) {
+        justify-content: center;
+      }
+    }
   }
 
   body, input, textarea, button {
@@ -42,6 +49,14 @@ export const Container = styled.main`
   grid-template-columns: repeat(3, auto);
   justify-content: space-between;
   gap: 1.875rem 0;
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+  }
 `;
 
 export const Button = styled.button`
@@ -53,4 +68,9 @@ export const Button = styled.button`
   font-size: 1rem;
   font-weight: 500;
   color: var(--color-green);
+
+  @media (max-width: 700px) {
+    min-width: 235.7px;
+    justify-self: center;
+  }
 `;

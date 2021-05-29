@@ -26,7 +26,9 @@ function App() {
         />
         <Card type="doação" info="36" />
       </Container>
-      <Button margin="40px"> Todas as Oportunidades </Button>
+      <div className="button">
+        <Button margin="40px"> Todas as Oportunidades </Button>
+      </div>
       <GlobalStyle />
     </>
   );
